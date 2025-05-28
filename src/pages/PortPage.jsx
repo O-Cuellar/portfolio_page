@@ -1,9 +1,10 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import "./PortPage.css";
 
+//Arrow function for manipulation of index lines
 const TerminalLine = ({ prompt, text, delay = 15, onComplete }) => {
   const [displayedText, setDisplayedText] = useState("");
-  const indexRef = useRef(0);
+  const indexRef = useRef(0); //
 
   useEffect(() => {
     indexRef.current = 0;
@@ -82,6 +83,8 @@ export default function Portfolio() {
     <div className="show1">
       <div className="show2">
         {completedLines.map((line, i) => {
+          const isLink = line.text.startsWith("http");
+
           let textColor = "#33ff33";
 
           if (
@@ -108,7 +111,18 @@ export default function Portfolio() {
               }}
             >
               <span style={{ color: "#00ff00" }}>{line.prompt}</span>{" "}
-              {line.text}
+              {isLink ? (
+                <a
+                  href={line.text}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#33ff33", textDecoration: "underline" }}
+                >
+                  {line.text}
+                </a>
+              ) : (
+                line.text
+              )}
             </div>
           );
         })}
@@ -118,21 +132,17 @@ export default function Portfolio() {
             key={currentLineIndex}
             prompt={lines[currentLineIndex].prompt}
             text={lines[currentLineIndex].text}
-            delay={32}
+            delay={40}
             onComplete={handleLineComplete}
           />
         )}
 
         {currentLineIndex >= lines.length && (
           <div
+            className="cursor"
             style={{ fontFamily: "'Fira Code', monospace", color: "#00ff00" }}
           >
             user@portfolio:~$ <span className="cursor">|</span>
-            <style>{`
-              .cursor {
-                animation: blink 1s step-start 0s infinite;
-              }
-            `}</style>
           </div>
         )}
       </div>

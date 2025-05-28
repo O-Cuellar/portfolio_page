@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-{
-  /*Arrow function terminal line que contem os parametros de render do texto */
-}
+//Arrow function paameter of terminal lines
 const TerminalLine = ({ prompt, text, delay = 15, onComplete }) => {
   const [displayedText, setDisplayedText] = useState("");
+  const indexRef = useRef(0);
+
   useEffect(() => {
+    indexRef.current = 0;
     let index = 0;
+
     const interval = setInterval(() => {
-      setDisplayedText(text.slice(0, index + 1));
-      index++;
-      if (index === text.length) {
+      
+      setDisplayedText((prev) => prev+text [indexRef.current]);
+      indexRef.current ++;
+
+      if (indexRef.current === text.length) {
         clearInterval(interval);
         if (onComplete) onComplete();
       }
