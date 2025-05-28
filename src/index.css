@@ -1,0 +1,15 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica;
+  padding: 0;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,12 @@
+.link-terminal {
+  color: #41ec41;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link-terminal:hover {
+  color: #077535;
+  transform: translateX(5px);
+}
