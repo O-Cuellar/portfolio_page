@@ -132,7 +132,7 @@ export default function Portfolio() {
             key={currentLineIndex}
             prompt={lines[currentLineIndex].prompt}
             text={lines[currentLineIndex].text}
-            delay={40}
+            delay={30}
             onComplete={handleLineComplete}
           />
         )}

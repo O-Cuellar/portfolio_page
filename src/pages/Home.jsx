@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
@@ -9,12 +9,11 @@ const TerminalLine = ({ prompt, text, delay = 15, onComplete }) => {
 
   useEffect(() => {
     indexRef.current = 0;
-    let index = 0;
+    setDisplayedText("");
 
     const interval = setInterval(() => {
-      
-      setDisplayedText((prev) => prev+text [indexRef.current]);
-      indexRef.current ++;
+      setDisplayedText((prev) => prev + text[indexRef.current]);
+      indexRef.current++;
 
       if (indexRef.current === text.length) {
         clearInterval(interval);
@@ -58,13 +57,13 @@ export default function Home() {
     { prompt: "user@portfolio:~$", text: "./userportfolio" },
   ];
 
-  const [currentLine, setCurrentLine] = useState(0);
+  const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [completedLines, setCompletedLines] = useState([]);
 
   //Arrow function for handle lines of terminal simulation
-  const handleLineComplete = () => {
+  const handleLineComplete = useCallback(() => {
     setCompletedLines((prev) => {
-      const newLine = lines[currentLine];
+      const newLine = lines[currentLineIndex];
 
       if (newLine.text === "./userportfolio") {
         return [...prev, { ...newLine, isPortfolio: true }]; // flag para mostrar botão
@@ -72,13 +71,8 @@ export default function Home() {
 
       return [...prev, newLine];
     });
-
-    if (currentLine < lines.length - 1) {
-      setTimeout(() => setCurrentLine(currentLine + 1), 500);
-    } else {
-      setCurrentLine(lines.length); //after finish lines display the cursor for simulation the terminal
-    }
-  };
+    setCurrentLineIndex((prev) => prev + 1);
+  }, [lines]);
 
   return (
     <div
@@ -175,16 +169,17 @@ export default function Home() {
           );
         })}
 
-        {currentLine < lines.length && (
+        {currentLineIndex < lines.length && (
           <TerminalLine
-            prompt={lines[currentLine].prompt}
-            text={lines[currentLine].text}
-            delay={40}
+            key={currentLineIndex}
+            prompt={lines[currentLineIndex].prompt}
+            text={lines[currentLineIndex].text}
+            delay={30}
             onComplete={handleLineComplete}
           />
         )}
 
-        {currentLine >= lines.length && (
+        {currentLineIndex >= lines.length && (
           <div
             style={{ fontFamily: "'Fira Code', monospace", color: "#00ff00" }}
           >
