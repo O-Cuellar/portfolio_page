@@ -5,7 +5,7 @@ import Portfolio from "./pages/PortPage.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/portfolio_page/">
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/portfolio" element={<Portfolio />} />
