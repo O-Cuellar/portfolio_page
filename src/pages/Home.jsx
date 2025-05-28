@@ -46,7 +46,7 @@ const TerminalLine = ({ prompt, text, delay = 15, onComplete }) => {
 };
 
 export default function Home() {
-  //Arrray key/value of text
+  //Arrray key/value of prompt and text
   const lines = [
     { prompt: "user@portfolio:~$", text: 'echo "name"' },
     { prompt: "->", text: "Otavio Cuellar" },
