@@ -15,3 +15,7 @@ The project uses an array of words that are displayed with a typewriter effect i
     Experiment with React and Vite
 
     Create a unique and personal portfolio
+
+🎯 Link
+
+    Exp
