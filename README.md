@@ -18,4 +18,4 @@ The project uses an array of words that are displayed with a typewriter effect i
 
 🎯 Link
 
-    Exp
+    https://o-cuellar.github.io/portfolio_page/
