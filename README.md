@@ -8,10 +8,6 @@ https://o-cuellar.github.io/portfolio_page/
 
 ## Como jogar
 
-- Tente adivinhar a palavra secreta, letra por letra.  
-- Você tem 3 tentativas para acertar.  
-- Acompanhe seus acertos e erros na tela.  
-- Sua pontuação aumenta conforme acerta letras.
 
 ## Como rodar localmente
 
