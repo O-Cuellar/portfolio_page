@@ -1,21 +1,36 @@
-Portfolio Landing Page
+# Landing Page 🌐
 
-This is a Landing Page developed for personal use. Since I’m a Linux enthusiast, I decided to adopt a terminal-style interface to showcase my portfolio in a minimalist and dynamic way.
+Um mini-jogo de adivinhação de palavras, inspirado no clássico programa do Silvio Santos! Desenvolvido com Vite + React para uma experiência rápida e divertida.
 
-The project uses an array of words that are displayed with a typewriter effect inside a fake terminal window, giving the page an interactive and retro touch.
+## Link para jogar
 
-🚀 Technologies
+https://o-cuellar.github.io/secretword/
 
-    Vite + React.js: for fast and modern frontend development
+## Como jogar
 
-    GitHub Pages: for easy deployment and hosting
+- Tente adivinhar a palavra secreta, letra por letra.  
+- Você tem 3 tentativas para acertar.  
+- Acompanhe seus acertos e erros na tela.  
+- Sua pontuação aumenta conforme acerta letras.
 
-🎯 Goals
+## Como rodar localmente
 
-    Experiment with React and Vite
+1. Clone o repositório  
+2. Instale as dependências com npm install  
+3. Rode o projeto com npm run dev  
+4. Acesse http://localhost:3000 no seu navegador
 
-    Create a unique and personal portfolio
+## Tecnologias usadas
 
-🎯 Link
+- React  
+- Vite  
+- JavaScript (ES6+)  
+- CSS Modules  
 
-    https://o-cuellar.github.io/portfolio_page/
+## Demo
+
+![Demo do Secret Word](src/assets/demo-secret-word.png)
+
+## Licença
+
+MIT License
