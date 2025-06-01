@@ -2,14 +2,11 @@
 
 Minha LandingPage feita usando Vite+React.js para simular um terminal de Linux 
 
-## Link para jogar
+## Link para acessar
 
 https://o-cuellar.github.io/portfolio_page/
 
-## Como jogar
-
-
-## Como rodar localmente
+## Como acessar o modelo localmente
 
 1. Clone o repositório  
 2. Instale as dependências com npm install  
