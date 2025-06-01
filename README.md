@@ -1,6 +1,6 @@
 # Landing Page 🌐
 
-Minha LandingPage feita usando Vite+React.js para simular um terminal de Linux 
+Uma LandingPage feita usando Vite+React.js para simular um terminal de Linux escrevendo os comandos e retornando as minhas informações
 
 ## Link para acessar
 
