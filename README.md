@@ -4,7 +4,7 @@ Um mini-jogo de adivinhação de palavras, inspirado no clássico programa do Si
 
 ## Link para jogar
 
-https://o-cuellar.github.io/secretword/
+https://o-cuellar.github.io/portfolio_page/
 
 ## Como jogar
 
