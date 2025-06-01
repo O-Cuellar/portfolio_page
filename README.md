@@ -1,6 +1,6 @@
 # Landing Page 🌐
 
-Um mini-jogo de adivinhação de palavras, inspirado no clássico programa do Silvio Santos! Desenvolvido com Vite + React para uma experiência rápida e divertida.
+Minha LandingPage feita usando Vite+React.js para simular um terminal de Linux 
 
 ## Link para jogar
 
