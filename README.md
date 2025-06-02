@@ -22,8 +22,6 @@ https://o-cuellar.github.io/portfolio_page/
 
 ## Demo
 
-![Demo do Secret Word](src/assets/demo-secret-word.png)
-
 ## Licença
 
 MIT License
